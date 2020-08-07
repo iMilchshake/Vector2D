@@ -5,6 +5,18 @@ from cli_tables.cli_tables import *
 from Vector2D import Vector2D
 from progress.bar import Bar
 
+# Example output with 300000 vector additions:
+# +----------+----------+----------+
+# | time [s] |   avg    |   var    |
+# +----------+----------+----------+
+# | Vector2D |   0.93   | 4.5E-05  |
+# +----------+----------+----------+
+# |  Tuple   |   0.75   | 0.00014  |
+# +----------+----------+----------+
+# | np.array |   1.2    | 0.00035  |
+# +----------+----------+----------+
+
+
 # workload-size
 N = 100000  # max number size
 loops = 300000  # amount of additions

@@ -17,5 +17,5 @@ print(c)
 ```
 
 # Efficiency
-Not quite as fast as tuples, but faster than using Numpy vectors. (see [speed_comparison.py](https://github.com/iMilchshake/Vector2D/speed_comparison.py))
+Not quite as fast as tuples, but faster than using Numpy vectors. (see [speed_comparison.py](https://github.com/iMilchshake/Vector2D/blob/master/speed_comparison.py))
 
