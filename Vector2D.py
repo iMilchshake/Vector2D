@@ -5,7 +5,7 @@ import math
 class Vector2D:
     """Class representing a 2D Vector"""
 
-    def __init__(self, x, y):
+    def __init__(self, x: float, y: float):
         self.x = x
         self.y = y
 
@@ -27,11 +27,17 @@ class Vector2D:
     def __eq__(self, other):
         return (self.x == other.x) and (self.y == other.y)
 
+    def __iter__(self):
+        return iter((self.x, self.y))
+
     def magnitude(self):
         return math.sqrt(self.x ** 2 + self.y ** 2)
 
     def magnitudeSquared(self):
         return self.x ** 2 + self.y ** 2
+
+    def shifted(self, shift_by):
+        return self + shift_by
 
     @staticmethod
     def zero():
@@ -40,3 +46,5 @@ class Vector2D:
     @staticmethod
     def rnd():
         return Vector2D(random.random(), random.random())
+
+

@@ -26,9 +26,9 @@ def test_sub():
 
 
 def test_mul():
-    assert a*0 == Vector2D.zero()
-    assert a*1 == a
-    assert a*2 == Vector2D(2*a.x, 2*a.y)
+    assert a * 0 == Vector2D.zero()
+    assert a * 1 == a
+    assert a * 2 == Vector2D(2 * a.x, 2 * a.y)
 
 
 def test_mag():
@@ -50,3 +50,13 @@ def test_rnd():
     for i in range(100):
         tmp = Vector2D.rnd()
         assert 0 <= tmp.x <= 1 and 0 <= tmp.y <= 1
+
+
+def test_unpacking():
+    tmp = Vector2D(*a)
+    assert 1, 2 == a
+    assert a == tmp
+
+
+def test_shifting():
+    assert c == a.shifted(b)
