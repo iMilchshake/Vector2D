@@ -39,6 +39,9 @@ class Vector2D:
     def shifted(self, shift_by):
         return self + shift_by
 
+    def normalized(self):
+        return self * (1/self.magnitude())
+
     @staticmethod
     def zero():
         return Vector2D(0, 0)
